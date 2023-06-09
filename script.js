@@ -11,13 +11,13 @@ const lookup = {
 };
 
 function rot13(str){
-  let decodeArr = "";
+  let decodeArr = [];
 	for(let i=0;i<str.length;i++){
 		if(lookup[str[i]]===undefined){
-			decodeArr += str[i]
+			decodeArr.push(str[i])
 		}
 		else
-			decodeArr += lookup[str[i]]
+			decodeArr.push(lookup[str[i]])
 	}
 	return decodeArr
 }
