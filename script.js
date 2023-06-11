@@ -11,15 +11,16 @@ const lookup = {
 };
 
 function rot13(str){
+  let codeArr = endcodedStr.split("")
   let decodeArr = [];
-	for(let i=0;i<str.length;i++){
-		if(lookup[str[i]]===undefined){
-			decodeArr.push(str[i])
+
+	decodeArr = codeArr.map(function (letter){
+		if(lookup.hasOwnProperty(letter)){
+			letter = lookup[letter];
 		}
-		else
-			decodeArr.push(lookup[str[i]])
-	}
-	return decodeArr
+		return letter
+	})
+	return  decodeArr.join("")
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
