@@ -20,7 +20,6 @@ function rot13(encodedStr){
 		else{
 			decodedArr.push(lookup[encodedStr[i]]);
 		}
-	}
 	return decodedArr;
 }
 
